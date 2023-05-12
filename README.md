@@ -1,6 +1,7 @@
  
 
-#AHK and Python script for Google's Bard AI
+# Reverse engineering of Google's Bard chatbot API with an AHK wrapper.
+
 This script uses AutoHotkey (AHK) and Python to communicate with Google's Bard AI. The script takes user input and sends it to the AI for analysis. The AI generates a response, which is then displayed to the user in AHK.
 
 #Prerequisites
