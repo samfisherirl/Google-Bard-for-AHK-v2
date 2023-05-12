@@ -4,7 +4,7 @@
 
 This script uses AutoHotkey (AHK) and Python to communicate with Google's Bard AI. The script takes user input and sends it to the AI for analysis. The AI generates a response, which is then displayed to the user in AHK.
 
-#Prerequisites
+# Prerequisites
 Before running this script, you'll need to have the following installed:
 
 AutoHotkey (version 2 or higher)
@@ -12,7 +12,7 @@ The Python requests library (you can install this using pip)
 You'll also need to have a Google API key to use the Bard AI. [Instructions for obtaining an API key can be found in the Bard API documentation.](https://github.com/acheong08/Bard)
 You just need the session ID, access is free. 
 
-Usage
+# Usage
 To use this script, follow these steps:
 
 Clone or download the project from GitHub.
