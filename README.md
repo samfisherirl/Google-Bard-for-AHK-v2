@@ -22,7 +22,7 @@ The script will send your query to the Bard AI, which will generate a response. 
 
 Acknowledgments
 This project is based on the work of Alex Cheong. Thank you to Alex for creating the original Python script that this project is based on!
-
+https://github.com/acheong08/Bard
 
 
 
