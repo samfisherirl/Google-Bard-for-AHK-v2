@@ -12,6 +12,15 @@ The Python requests library (you can install this using pip)
 You'll also need to have a Google API key to use the Bard AI. [Instructions for obtaining an API key can be found in the Bard API documentation.](https://github.com/acheong08/Bard)
 You just need the session ID, access is free. 
 
+# Authentication
+Go to https://bard.google.com/
+
+F12 for console
+Copy the values
+Session: Go to Application → Cookies → __Secure-1PSID. Copy the value of that cookie.
+Usage
+
+
 # Usage
 To use this script, follow these steps:
 
