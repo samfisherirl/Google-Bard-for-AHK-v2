@@ -20,6 +20,15 @@ Open the Example.ahk script in AutoHotkey.
 Replace Token/Session ID on line 3 with your actual Google API key.
 The script will send your query to the Bard AI, which will generate a response. The response will be displayed in AHK.
 
+```autohotkey
+session_token := "xxxxxxxx"
+Barder := Bard(session_token)
+Barder.Connect()
+response := Barder.ask("Whats the average weather in Fiji?")
+MsgBox(response)
+Barder.Close()
+```
+
 Acknowledgments
 This project is based on the work of Alex Cheong. Thank you to Alex for creating the original Python script that this project is based on!
 https://github.com/acheong08/Bard
