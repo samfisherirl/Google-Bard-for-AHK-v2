@@ -27,7 +27,7 @@ Clone or download the project from GitHub.
 Open the Example.ahk script in AutoHotkey.
 Replace Token/Session ID on line 3 with your actual Google API key.
 The script will send your query to the Bard AI, which will generate a response. The response will be displayed in AHK.
-![image](https://github.com/samfisherirl/Google-Bard-for-AHK-v2/assets/98753696/ce3ce935-c974-4922-b7c7-bfdab4a55227)
+ ![giphy (1)](https://github.com/samfisherirl/Google-Bard-for-AHK-v2/assets/98753696/b308323b-aafb-48e3-b436-ac5dc62659a8)
 
 ```autohotkey
 session_token := "xxxxxxxx"
