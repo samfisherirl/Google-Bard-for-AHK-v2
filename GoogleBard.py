@@ -50,7 +50,10 @@ if __name__ == "__main__":
     chatbot = Chatbot(bot.token)
     bot.checkLock()
     while bot.lock:
-        bot.getRequest()
+        try:
+            bot.getRequest()
+        except:
+            continue
         if bot.request:
             bot.response = chatbot.ask(bot.request)
             bot.writeResponse()
