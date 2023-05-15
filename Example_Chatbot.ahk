@@ -1,10 +1,13 @@
 ﻿#Include bard.ahk
 #Requires Autohotkey v2.0
-;AutoGUI 2.5.8
-;Auto-GUI-v2 credit to Alguimist autohotkey.com/boards/viewtopic.php?f=64&t=89901
-;AHKv2converter credit to github.com/mmikeww/AHK-v2-script-converter
+/*https://github.com/samfisherirl/Google-Bard-for-AHK-v2 
+For API access (2mins):
+Go to https://bard.google.com/
+F12 for console Copy the values
+Session: Go to Application → Cookies → . Copy the value of that cookie.__Secure-1PSID and paste into session_token
+*/
 global Barder := False
-
+global session_token := "xxxxxxx"
 
 myGui := Gui()
 myGui.SetFont("s12", "Consolas")
@@ -30,9 +33,9 @@ $~Enter::
 
 OnEventHandler(*)
 {
-	global Barder
+	global Barder, session_token
+	divider := "`n*******************************`n"
 	if !Barder {
-		session_token := "x."
 		Barder := Bard(session_token)
 		Barder.Connect()
 		; Barder.Close()
@@ -45,7 +48,7 @@ OnEventHandler(*)
 	UserInput.Value := ""
 	GoogleBotField.Value :=  Format("asking...{1}`n`n{2}", request, GoogleBotField.Value) 
 	response := Barder.ask(request)
-	response := Format("{1}: `n{2}`n`n", request, response)
+	response := Format("{3}{1}: `n{2}`n`n", request, response, divider)
 	GoogleBotField.Value := response . originalBotField
 }
 
