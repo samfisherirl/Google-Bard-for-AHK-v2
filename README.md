@@ -28,8 +28,6 @@ Open the Example.ahk script in AutoHotkey.
 Replace Token/Session ID on line 3 with your actual Google API key.
 The script will send your query to the Bard AI, which will generate a response. The response will be displayed in AHK.
  
- ![giphy (1)](https://github.com/samfisherirl/Google-Bard-for-AHK-v2/assets/98753696/b308323b-aafb-48e3-b436-ac5dc62659a8)
-
 ```autohotkey
 #Include bard.ahk
 /*https://github.com/samfisherirl/Google-Bard-for-AHK-v2 
@@ -52,8 +50,6 @@ MsgBox(response)
 opens connection, asks the question, and upon response the connection to bard is closed. This is slower but less code.
 */
 
-
-
 Barder.Connect()
 response := Barder.ask("Whats the average weather in Fiji?")
 MsgBox(response)
@@ -62,6 +58,8 @@ Barder.Close()
 Connects to bard via python application. stays open until closed, and questions can be concurrent. This is faster for multiple q's as the connection is left open.
 */
 ```
+
+ ![giphy (1)](https://github.com/samfisherirl/Google-Bard-for-AHK-v2/assets/98753696/b308323b-aafb-48e3-b436-ac5dc62659a8)
 
 # Acknowledgments
 This project is based on the work of Alex Cheong. Thank you to Alex for creating the original Python script that this project is based on!
