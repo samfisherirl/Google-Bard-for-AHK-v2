@@ -40,23 +40,26 @@ Session: Go to Application → Cookies → . Copy the value of that cookie.__Sec
 session_token := "xxxxxxxx."
 
 Barder := Bard(session_token)
-/*
-instantiate Bard object, writes token to file. Waits for user to make ask or connect to open python exe
-*/
+; instatiate Bard object, writes token to file. Waits for user to make ask or connect to open python exe
+
 
 response := Barder.singleAsk("Whats the weather like in Fiji?")
 MsgBox(response)
-/*
-opens connection, asks the question, and upon response the connection to bard is closed. This is slower but less code.
-*/
+; opens connection, asks the question, and upon response the connection to bard is closed. This is slower but less code.
+
+
+
 
 Barder.Connect()
 response := Barder.ask("Whats the average weather in Fiji?")
 MsgBox(response)
-Barder.Close()
-/*
-Connects to bard via python application. stays open until closed, and questions can be concurrent. This is faster for multiple q's as the connection is left open.
-*/
+response := Barder.ask("How can I travel there?")
+MsgBox(response)
+Barder.Close() 
+; Connects to bard via python application. stays open until closed, and questions can be concurrent. This is faster for multiple q's as the connection is left open.
+ 
+
+
 ```
 
  ![giphy (1)](https://github.com/samfisherirl/Google-Bard-for-AHK-v2/assets/98753696/b308323b-aafb-48e3-b436-ac5dc62659a8)
