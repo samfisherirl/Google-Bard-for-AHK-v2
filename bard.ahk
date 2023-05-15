@@ -28,6 +28,15 @@ class Bard {
 			}
 		}
 	}
+	singleAsk(txt){
+		/*
+		opens connection, asks the question, and upon response the connection to bard is closed. Use "connect() then ask() to ask concurrent questions"
+		*/
+		this.openApp()
+		this.ask(txt)
+		this.Close()
+		return this.response
+	}
 	openLock() {
 		FileAppend(lock_path, lock_path)
 	}
