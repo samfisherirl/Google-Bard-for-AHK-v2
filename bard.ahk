@@ -19,6 +19,7 @@ class Bard {
 		this.writeKey()
 	}
 	connect(){
+	; runs python exe and connects using session token.!Requires that you .Close() when done. 
 		this.openApp()
 	}
 	clean() {
@@ -29,9 +30,8 @@ class Bard {
 		}
 	}
 	singleAsk(txt){
-		/*
-		opens connection, asks the question, and upon response the connection to bard is closed. Use "connect() then ask() to ask concurrent questions"
-		*/
+		; opens connection, asks the question, and upon response the connection to bard is closed. Use "connect() then ask() to ask concurrent questions"
+		
 		this.openApp()
 		this.ask(txt)
 		this.Close()
@@ -49,6 +49,7 @@ class Bard {
 		this.PID := PID
 	}
 	ask(text) {
+	; if .Connect() has been run, this will ask the chatbot param question, !Requires that you .Close() when done. 
 		this.response := ""
 		if FileExist(response_path) {
 			FileMove(response_path, trash_path, 1)
@@ -73,6 +74,7 @@ class Bard {
 		return this.response
 	}
 	Close() {
+	; disconnect from chatbot
 		this.clean()
 	}
 }
