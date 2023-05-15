@@ -45,7 +45,7 @@ Barder := Bard(session_token)
 
 response := Barder.singleAsk("Whats the weather like in Fiji?")
 MsgBox(response)
-; opens connection, asks the question, and upon response the connection to bard is closed. This is slower but less code.
+; opens connection, asks the question, and upon response the connection to bard is closed. This is slower but less code. It also doesn't require disconnecting.
 
  
 Barder.Connect()
