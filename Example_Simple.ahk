@@ -10,7 +10,7 @@ session_token := "xxxxxxxx."
 
 Barder := Bard(session_token)
 /*
-instatiate Bard object, writes token to file. Waits for user to make ask or connect to open python exe
+instantiate Bard object, writes token to file. Waits for user to make ask or connect to open python exe
 */
 
 response := Barder.singleAsk("Whats the weather like in Fiji?")
