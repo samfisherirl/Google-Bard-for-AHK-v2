@@ -1,4 +1,4 @@
-﻿#Include bard.ahk
+#Include bard.ahk
 /*https://github.com/samfisherirl/Google-Bard-for-AHK-v2 
 For API access (2mins):
 Go to https://bard.google.com/
@@ -10,7 +10,7 @@ session_token := "xxxxxxxx."
 
 Barder := Bard(session_token)
 /*
-instantiate Bard object, writes token to file. Waits for user to make ask or connect to open python exe
+instatiate Bard object, writes token to file. Waits for user to make ask or connect to open python exe
 */
 
 response := Barder.singleAsk("Whats the weather like in Fiji?")
@@ -23,6 +23,8 @@ opens connection, asks the question, and upon response the connection to bard is
 
 Barder.Connect()
 response := Barder.ask("Whats the average weather in Fiji?")
+MsgBox(response)
+response := Barder.ask("How can I travel there?")
 MsgBox(response)
 Barder.Close()
 /*
