@@ -23,7 +23,7 @@ Copy the values
 # Usage
 To use this script, follow these steps:
 
-Clone or download the project from GitHub.
+Download the release file from GitHub.
 Open the Example.ahk script in AutoHotkey.
 Replace Token/Session ID on line 3 with your actual Google API key.
 The script will send your query to the Bard AI, which will generate a response. The response will be displayed in AHK.
