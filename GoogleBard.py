@@ -46,17 +46,17 @@ class Bot:
         
  
 if __name__ == "__main__":
-    bot = Bot()
-    chatbot = Chatbot(bot.token)
-    bot.checkLock()
-    while bot.lock:
+    ahk = Bot()
+    chatbot = Chatbot(ahk.token)
+    ahk.checkLock()
+    while ahk.lock:
         try:
-            bot.getRequest()
+            ahk.getRequest()
         except:
             continue
-        if bot.request:
-            bot.response = chatbot.ask(bot.request)
-            bot.writeResponse()
-        bot.checkLock()
-        if bot.lock == False:
+        if ahk.request:
+            ahk.response = chatbot.ask(ahk.request)
+            ahk.writeResponse()
+        ahk.checkLock()
+        if ahk.lock == False:
             break
